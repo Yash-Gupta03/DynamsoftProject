@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background-color: black; */
+}
+
+#content {
+  height: 600px;
+  margin: 100px 200px;
+  background-color: #e5e7e6;
+  display: flex;
+}
+
+#leftpanel {
+  height: 600px;
+  width: 60%;
+  /* margin: 100px 200px; */
+  /* background-color: #b7b5b3; */
+  border: 1px solid black;
+}
+
+#features {
+  padding: 20px;
+  margin: 10px;
+}
+
+.feature {
+  padding: 3px;
+}
+
+#rightpanel {
+  height: 600px;
+  width: 40%;
+  /* margin: 100px 200px; */
+  /* background-color: #b7b5b3; */
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamsoft Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="leftpanel">
+        <div id="dwtcontrolContainer"></div>
+      </div>
+      <div id="rightpanel">
+        <div id="features">
+          <div id="select-scanner" class="feature">
+            <h3>Select Source</h3>
+            <select id="scanner"></select>
+          </div>
+          <div id="show-ui-checkbox" class="feature">
+            <label for="showUI">Show UI</label>
+            <input
+              type="checkbox"
+              name="showUI"
+              id="showUI"
+              onchange="toggleCheckboxValue('showUI')"
+            />
+          </div>
+          <div id="autofeeder-checkbox" class="feature">
+            <label for="autofeeder">autofeeder</label>
+            <input
+              type="checkbox"
+              name="autofeeder"
+              id="autofeeder"
+              onchange="toggleCheckboxValue('autofeeder')"
+            />
+          </div>
+          <div id="pixel-type" class="feature">
+            <label for="PixelType">Pixel Type</label>
+            <br />
+            <label>
+              <input type="radio" name="PixelType" value="blackAndWhite" checked/>
+              Black and White
+            </label>
+            <br />
+
+            <label>
+              <input type="radio" name="PixelType" value="gray" />
+              Gray
+            </label>
+            <br />
+
+            <label>
+              <input type="radio" name="PixelType" value="colorful" />
+              Colorful
+            </label>
+          </div>
+          <div id="pixel" class="feature">
+            <label for="resolution">Resolution:</label>
+            <select id="resolution">
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="300">300</option>
+            </select>
+          </div>
+          <div
+            id="button1"
+            value="Scan"
+            class="feature"
+          >
+            <button onclick="acquireImage();">Scan</button>
+          </div>
+          <div id="button2" class="feature">
+            <button onclick="saveasPdf()">Save as PDF</button>
+          </div>
+          <div id="button2" class="feature">
+            <button onclick="saveIndividualPdf()">Save as PDF2</button>
+          </div>
+          <div id="button3" class="feature">
+            <button onclick="removeSelectedImages()">Remove Selected Images</button>
+          </div>
+          <div id="button4" class="feature">
+            <button onclick="removeAllImages()">Remove All Images</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="Resources/dynamsoft.webtwain.config.js?t=170607"></script>
+  <script src="Resources/dynamsoft.webtwain.initiate.js?t=170607"></script>
+  <script src="Resources/addon/dynamsoft.webtwain.addon.pdf.js?t=170607"></script>
+  <script src="script.js"></script>
+</html>
